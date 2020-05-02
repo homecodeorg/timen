@@ -1,0 +1,34 @@
+{
+  "name": "timen",
+  "version": "0.0.1",
+  "description": "Time manager.",
+  "author": "Oleg Apostol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apostololeg/timen/issues"
+  },
+  "homepage": "https://github.com/apostololeg/timen#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apostololeg/timen.git"
+  },
+  "keywords": [
+    "time",
+    "manager"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "build:dev": "webpack --mode=development",
+    "dev": "webpack --mode=development --watch"
+  },
+  "dependencies": {
+    "webpack-dev-server": "^3.10.3"
+  },
+  "devDependencies": {
+    "terser-webpack-plugin": "^2.3.5",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
