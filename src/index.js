@@ -84,7 +84,7 @@ function runWorker() {
   window.requestAnimationFrame(worker);
 }
 
-export default {
+export {
   create,
   at,
   after,
