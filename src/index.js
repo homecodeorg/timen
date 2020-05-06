@@ -23,13 +23,22 @@ function add(time, data) {
 // API:
 const at = (time, cb) => add(time, { cb });
 const after = (ms, cb) => add(Date.now() + ms, { cb });
-const every = (ms, cb) =>
-  add(Date.now() + ms, {
-    cb: () => {
-      cb();
-      every(ms, cb);
-    },
-  });
+const every = (ms, cb) => {
+  let stopped;
+
+  const register = () => {
+    add(Date.now() + ms, {
+      cb: () => {
+        if (stopped) return;
+        cb();
+        register();
+      },
+    });
+  };
+
+  register();
+  return () => (stopped = true);
+};
 const tick = cb =>
   add(Date.now(), {
     cb: () => {
@@ -56,8 +65,8 @@ function create() {
       }
 
       store.forEach(clear => clear());
-    }
-  }
+    },
+  };
 }
 
 function worker() {
@@ -84,11 +93,4 @@ function runWorker() {
   window.requestAnimationFrame(worker);
 }
 
-export {
-  create,
-  at,
-  after,
-  every,
-  tick,
-  nextTick,
-};
+export { create, at, after, every, tick, nextTick };
