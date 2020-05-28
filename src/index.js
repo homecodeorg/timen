@@ -60,7 +60,8 @@ function create() {
     },
     clear(cb) {
       if (cb) {
-        store.get(cb)();
+        const clear = store.get(cb);
+        if (clear) clear();
         return;
       }
 
