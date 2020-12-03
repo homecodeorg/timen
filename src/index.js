@@ -77,11 +77,12 @@ function worker() {
     if (parseInt(time, 10) > now) return;
 
     // flush all callbacks, registered at current time
-    state[time].forEach(({ cb }) => {
-      try {
-        cb();
-      } catch (e) {} // eslint-disable-line
-    });
+    state[time] &&
+      state[time].forEach(({ cb }) => {
+        try {
+          cb();
+        } catch (e) {} // eslint-disable-line
+      });
 
     delete state[time];
   });
