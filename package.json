@@ -1,16 +1,16 @@
 {
   "name": "timen",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Time manager.",
   "author": "Oleg Apostol",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/apostololeg/timen/issues"
+    "url": "https://github.com/foreverido/timen/issues"
   },
-  "homepage": "https://github.com/apostololeg/timen#readme",
+  "homepage": "https://github.com/foreverido/timen#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/apostololeg/timen.git"
+    "url": "git+https://github.com/foreverido/timen.git"
   },
   "keywords": [
     "time",
