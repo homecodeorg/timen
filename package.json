@@ -1,6 +1,6 @@
 {
   "name": "timen",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "Time manager.",
   "author": "Oleg Apostol",
   "license": "ISC",
@@ -28,8 +28,7 @@
     "release:major": "yarn release -- --release-as major",
     "release:as": "yarn release -- --release-as"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "replace": "^1.2.1",
     "standard-version": "^9.5.0",
