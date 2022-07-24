@@ -21,14 +21,21 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "build:dev": "webpack --mode=development",
-    "dev": "webpack --mode=development --watch"
+    "dev": "webpack --mode=development --watch",
+    "release": "standard-version",
+    "release:patch": "yarn release -- --release-as patch",
+    "release:minor": "yarn release -- --release-as minor",
+    "release:major": "yarn release -- --release-as major",
+    "release:as": "yarn release -- --release-as"
   },
   "dependencies": {
-    "webpack-dev-server": "^3.10.3"
   },
   "devDependencies": {
+    "replace": "^1.2.1",
+    "standard-version": "^9.5.0",
     "terser-webpack-plugin": "^2.3.5",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }
