@@ -92,6 +92,7 @@ function worker() {
 }
 
 function runWorker() {
+  if (typeof window === 'undefined') return
   window.requestAnimationFrame(worker);
 }
 
